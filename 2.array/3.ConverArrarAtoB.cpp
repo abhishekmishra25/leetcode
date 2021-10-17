@@ -40,40 +40,38 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 // code begins here
-int minInsAndDel(vector<int> a, vector<int> b, int n, int m)
+
+class Solution
 {
-    // code here
-    vector<int> new_a, lis, mp(1e5 + 1, 0);
-    for (int i = 0; i < m; i++)
-        mp[b[i]]++;
-    for (int i = 0; i < n; i++)
-        if (mp[a[i]])
-            new_a.push_back(a[i]);
-    for (auto x : new_a)
-    { // finding LIS in O(NlogN) of new_a.
-        auto it = lower_bound(lis.begin(), lis.end(), x);
-        if (it != lis.end())
-            *it = x;
-        else
-            lis.push_back(x);
+public:
+    int minInsAndDel(int a[], int b[], int n, int m)
+    {
+        // code here
+        vector<int> new_a, lis, mp(1e5 + 1, 0);
+        for (int i = 0; i < m; i++)
+            mp[b[i]]++;
+        for (int i = 0; i < n; i++)
+            if (mp[a[i]])
+                new_a.push_back(a[i]);
+        for (auto x : new_a)
+        { // finding LIS in O(NlogN) of new_a.
+            auto it = lower_bound(lis.begin(), lis.end(), x);
+            if (it != lis.end())
+                *it = x;
+            else
+                lis.push_back(x);
+        }
+        return n + m - 2 * lis.size(); // ans=n+m-2*LIS(new_A)
     }
-    return n + m - 2 * lis.size();
-}
+};
 void solve()
 {
     int n, m;
     cin >> n, m;
-    vector<int> a(n);
-    vector<int> b(m);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    for (int j = 0; j < m; j++)
-    {
-        cin >> b[j];
-    }
-    cout << minInsAndDel(a, b, n, m);
+    Solution ob;
+    int a[n] = {1, 2, 5, 3, 1};
+    int b[n] = {1, 3, 5};
+    cout << ob.minInsAndDel(a, b, n, m);
 }
 
 signed main()
@@ -81,11 +79,12 @@ signed main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    int tc;
-    cin >> tc;
-    fo(0, tc)
-    {
-        // cout << "Case #" << t << ": ";
-        solve();
-    }
+    /* int tc;
+     cin >> tc;
+     fo(0, tc)
+     {
+         // cout << "Case #" << t << ": ";
+         solve();
+     }*/
+    solve();
 }
