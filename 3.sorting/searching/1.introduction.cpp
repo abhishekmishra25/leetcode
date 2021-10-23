@@ -13,7 +13,7 @@ void Binarysearch(int arr[], int n, int x)
         }
         else if (arr[mid] < x)
         {
-            l = id + 1;
+            l = mid + 1;
         }
         else
         {
