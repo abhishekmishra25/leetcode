@@ -22,6 +22,18 @@ void Binarysearch(int arr[], int n, int x)
     }
     cout << "element no found in array : " << endl;
 }
+void linear_search(int arr[], int n, int x)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == x)
+        {
+            cout << "element found at index : " << i << endl;
+            return;
+        }
+    }
+    cout << "element no found in array : " << endl;
+}
 int main()
 {
     // binary search is done on sorted array it takes O(log(n))
