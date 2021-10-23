@@ -39,4 +39,5 @@ int main()
     // binary search is done on sorted array it takes O(log(n))
     // linear serch is done any kind of array it takes O(n) time
     int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11};
+    Binarysearch(arr, 10, 5);
 }
