@@ -1,4 +1,4 @@
-#include <bits/sdtc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int gcd(int a, int b)
 {
@@ -10,8 +10,14 @@ int gcd(int a, int b)
 }
 int lcm(int a, int b)
 {
+    // we know that a*b = lcm(a,b)*gcd(a,b)
     return (a * b) / gcd(a, b);
 }
 int main()
 {
+    int a, b;
+    cin >> a >> b;
+    cout << "LCM OF given number         :          " << lcm(a, b) << endl;
+    cout << "GCD of given number         :          " << gcd(a, b);
+    return 0;
 }
