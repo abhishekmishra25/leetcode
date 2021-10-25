@@ -12,5 +12,9 @@ int main()
     cout << (~z) << endl;
     z - 5;
     cout << (~z) << endl;
+    int k = 1;
+    cout << (~k) << endl;
+    k = 5;
+    cout << (~k) << endl;
     return 0;
 }
