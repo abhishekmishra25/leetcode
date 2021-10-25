@@ -7,5 +7,8 @@ int main()
     cout << (x >> 2) << endl;
     int y = 4;
     cout << (x >> y) << endl;
+    // NOT operator in c++
+    unsigned int z = 1;
+    cout << (~z) << endl;
     return 0;
 }
