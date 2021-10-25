@@ -7,4 +7,5 @@ int main()
     cout << (x << 2) << endl;
     int y = 4;
     cout << (x << y) << endl;
+    return 0;
 }
