@@ -10,5 +10,7 @@ int main()
     // NOT operator in c++
     unsigned int z = 1;
     cout << (~z) << endl;
+    z - 5;
+    cout << (~z) << endl;
     return 0;
 }
