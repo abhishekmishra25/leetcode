@@ -10,4 +10,5 @@ int main()
     cout << (x | y) << " ";
     // bitwise XOR operator
     cout << (x ^ y) << " ";
+    return 0;
 }
