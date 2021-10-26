@@ -5,8 +5,8 @@ void solve()
 {
     int n, k;
     cin >> n >> k;
-    int y = (n << (k - 1));
-    if (y % 2 == 0)
+    int y = n & (1 << (k - 1));
+    if (y == 0)
     {
         cout << " NO " << endl;
     }
