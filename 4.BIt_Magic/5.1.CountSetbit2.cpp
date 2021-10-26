@@ -12,7 +12,7 @@ void initialize()
 int main()
 {
     int n;
-    cin >> x;
+    cin >> n;
     int res = table[n & 0xff];
     n = n >> 8;
     res += table[n & 0xff];
