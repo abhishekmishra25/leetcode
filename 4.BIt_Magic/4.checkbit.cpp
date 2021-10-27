@@ -24,4 +24,7 @@ int main()
         solve();
     }
     return 0;
+    // thats it for check bitt
+    // https://practice.geeksforgeeks.org/problems/find-first-set-bit-1587115620/1/?track=P100-Bit%20Magic&batchId=197#
+    // question you can prectice on
 }
