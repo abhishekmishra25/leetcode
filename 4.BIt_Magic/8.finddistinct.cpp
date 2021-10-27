@@ -9,8 +9,8 @@
 using namespace std;
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 1, 2, 3, 3, 4, 4, 5, 6, 5, 6};
-    int n = 14;
+    int arr[] = {3, 4, 4, 3, 3, 4, 4, 6};
+    int n = 8;
     int x = 0, res1 = 0, res2 = 0;
     for (int i = 0; i < n; i++)
     {
@@ -19,7 +19,7 @@ int main()
     int sbl = x & (~x); // to find the last set bit if result
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] & sbl != 0)
+        if ((arr[i] & sbl) != 0)
         {
             res1 = res1 ^ arr[i];
         }
