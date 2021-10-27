@@ -15,4 +15,17 @@ int main()
         x = x ^ arr[i];
     }
     int sbl = x & (~x); // to find the last set bit if result
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] & sbl != 0)
+        {
+            res1 = res1 ^ arr[i];
+        }
+        else
+        {
+            res2 = res2 ^ arr[i];
+        }
+    }
+    cout << res1 << " " << res2 << endl;
+    return 0;
 }
