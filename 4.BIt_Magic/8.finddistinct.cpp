@@ -9,14 +9,14 @@
 using namespace std;
 int main()
 {
-    int arr[] = {3, 4, 4, 3, 3, 4, 4, 6};
-    int n = 8;
+    int arr[] = {3, 4, 4, 3, 3, 3, 5, 4, 4, 6};
+    int n = 10;
     int x = 0, res1 = 0, res2 = 0;
     for (int i = 0; i < n; i++)
     {
         x = x ^ arr[i];
     }
-    int sbl = x & (~x); // to find the last set bit if result
+    int sbl = x & (~x - 1); // to find the last set bit if result
     for (int i = 0; i < n; i++)
     {
         if ((arr[i] & sbl) != 0)
