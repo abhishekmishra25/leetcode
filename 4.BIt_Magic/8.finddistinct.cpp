@@ -7,10 +7,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+void find_two_odd(int arr[], int n)
 {
-    int arr[] = {3, 4, 4, 3, 3, 3, 5, 4, 4, 6};
-    int n = 10;
     int x = 0, res1 = 0, res2 = 0;
     for (int i = 0; i < n; i++)
     {
@@ -29,5 +27,11 @@ int main()
         }
     }
     cout << res1 << " " << res2 << endl;
+}
+int main()
+{
+    int arr[] = {3, 4, 4, 3, 3, 3, 5, 4, 4, 6};
+    int n = 10;
+    find_two_odd(arr, n);
     return 0;
 }
