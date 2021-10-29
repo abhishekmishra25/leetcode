@@ -14,6 +14,6 @@ int main()
 {
     int n;
     cin >> n;
-    NaturalSum(n);
+    cout << NaturalSum(n) << endl;
     return 0;
 }
