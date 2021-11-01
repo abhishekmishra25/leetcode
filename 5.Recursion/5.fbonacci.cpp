@@ -18,6 +18,6 @@ int main()
 {
     int n;
     cin >> n;
-    cout << fibonacci(n - 1);
+    cout << fibonacci(n);
     return 0;
 }
