@@ -4,7 +4,7 @@ using namespace std;
 
 ll fect(int n)
 {
-    if (n == 1)
+    if (n == 0)
     {
         return 1;
     }
