@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool recursive(string str, int n, int l = 0)
+bool recursive(string str, int start, int end)
 {
-    if (n == 0 || n == 1)
+    if (end == 0 || end == 1)
     {
         return true;
     }
 
-    else if (str[l] == str[n - 1])
+    else if (str[start] == str[end - 1])
     {
-        recursive(str, n - 1, l + 1);
+        recursive(str, start + 1, end - 1);
     }
     else
     {
