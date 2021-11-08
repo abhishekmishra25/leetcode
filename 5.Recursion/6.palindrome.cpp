@@ -3,7 +3,7 @@ using namespace std;
 
 bool recursive(string str, int start, int end)
 {
-    if (end == 0 || end == 1)
+    if (start >= end)
     {
         return true;
     }
