@@ -13,12 +13,12 @@ int ropeCutting(int n, int a, int b, int c)
     {
         return -1;
     }
-    return res;
+    return res + 1;
 }
 
 int main()
 {
-    int n = 23, a = 11, b = 9, c == 12;
+    int n = 23, a = 11, b = 9, c = 12;
     cout << ropeCutting(n, a, b, c);
     return 0;
 }
