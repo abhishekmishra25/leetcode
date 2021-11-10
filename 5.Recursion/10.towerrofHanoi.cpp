@@ -5,21 +5,22 @@ using namespace std;
 // it is mearly hard to draw recursion tree
 // so it very hard and conceptiual
 
-void TOH(int n, int a, int b, int c)
+void TOH(int n, char A, char B, char C)
 {
-    if (a == 0)
+    if (n == 1)
     {
-        cout << "move 1 from " << a << " to " << c << endl;
+        cout << "move 1 from " << A << " to " << C << endl;
         return;
     }
-    TOH(n - 1, a, b, c);
-    cout << "move disc  " << n << " from " << a << " to " << c << endl;
-    TOH(n - 1, b, a, c);
+    TOH(n - 1, A, C, B);
+    cout << "move disc  " << n << " from " << A << " to " << C << endl;
+    TOH(n - 1, B, A, C);
 }
 
 int main()
 {
     int n;
-    TOH(2, 1, 2, 3);
+    char A = 'A', B = 'B', C = 'C';
+    TOH(2, A, B, C);
     return 0;
 }
