@@ -5,15 +5,20 @@ using namespace std;
 // it is mearly hard to draw recursion tree
 // so it very hard and conceptiual
 
-void TowerofHanoi(int a, int b, int c)
+void THO(int n, int a, int b, int c)
 {
     if (a == 0)
     {
         return;
     }
+    TOH(n - 1, a, b, c);
+    cout << "move disc for " << a << " to " << c << endl;
+    TOH(n - 1, b, a, c);
 }
 
 int main()
 {
     int n;
+    TOH(2, 1, 2, 3);
+    return 0;
 }
