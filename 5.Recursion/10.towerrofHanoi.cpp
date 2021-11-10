@@ -5,14 +5,15 @@ using namespace std;
 // it is mearly hard to draw recursion tree
 // so it very hard and conceptiual
 
-void THO(int n, int a, int b, int c)
+void TOH(int n, int a, int b, int c)
 {
     if (a == 0)
     {
+        cout << "move 1 from " << a << " to " << c << endl;
         return;
     }
     TOH(n - 1, a, b, c);
-    cout << "move disc for " << a << " to " << c << endl;
+    cout << "move disc  " << n << " from " << a << " to " << c << endl;
     TOH(n - 1, b, a, c);
 }
 
