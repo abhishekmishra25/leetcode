@@ -1,21 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int subsetSUM(vector<int> v, int n, int kum, int i = 0, int curr = 0)
+int subsetSUM(vector<int> v, int n, int kum, int curr = 0)
 {
-    if (i == n)
+    if (n == 0)
     {
-        if (kum == curr)
-        {
-            return 1;
-        }
+        if curr == kum)
+            {
+                return 1;
+            }
         else
         {
             return 0;
         }
     }
-    subsetSUM(v, n, kum, i + 1, curr += v[i]);
-    subsetSUM(v, n, kum, i + 1, curr);
+    return subsetSUM(v, n - 1, kum, curr += v[n - 1]) + subsetSUM(v, n - 1, kum, curr);
 }
 
 int main()
