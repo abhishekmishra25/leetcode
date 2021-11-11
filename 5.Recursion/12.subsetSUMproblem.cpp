@@ -14,8 +14,8 @@ int subsetSUM(vector<int> v, int n, int kum, int i = 0, int curr = 0)
             return 0;
         }
     }
-    subsetSUM(v, n, kum, i + 1, curr);
     subsetSUM(v, n, kum, i + 1, curr += v[i]);
+    subsetSUM(v, n, kum, i + 1, curr);
 }
 
 int main()
