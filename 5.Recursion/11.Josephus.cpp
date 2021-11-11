@@ -16,7 +16,7 @@ int josephus(int n, int k)
 
 int main()
 {
-    int n = 7, k = 3;
+    int n = 4, k = 3;
     cout << josephus(n, k);
     return 0;
 }
