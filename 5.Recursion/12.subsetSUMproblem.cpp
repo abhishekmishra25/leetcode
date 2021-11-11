@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int subsetSUM(vector<int> v, int n, int sum, int i = 0, int curr = 0)
+int subsetSUM(vector<int> v, int n, int kum, int i = 0, int curr = 0)
 {
     if (i == n)
     {
-        if (sum == curr)
+        if (kum == curr)
         {
             return 1;
         }
@@ -14,15 +14,15 @@ int subsetSUM(vector<int> v, int n, int sum, int i = 0, int curr = 0)
             return 0;
         }
     }
-    subsetSUM(v, n, sum, i + 1, curr);
-    subsetSUM(v, n, sum, i + 1, curr += v[i]);
+    subsetSUM(v, n, kum, i + 1, curr);
+    subsetSUM(v, n, kum, i + 1, curr += v[i]);
 }
 
 int main()
 {
     int n = 7;
     vector<int> v = {5, 6, 7, 8, 9, 3, 7};
-    int sum = 14;
-    cout << subsetSUM(v, n, sum);
+    int kum = 14;
+    cout << subsetSUM(v, n, kum);
     return 0;
 }
