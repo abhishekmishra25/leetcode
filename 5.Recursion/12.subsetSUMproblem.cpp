@@ -5,7 +5,7 @@ int subsetSUM(int v[], int n, int kum)
 {
     if (n == 0)
     {
-        return kum == 0 ? 1 : 0;
+        return (kum == 0) ? 1 : 0;
     }
     return subsetSUM(v, n - 1, kum) + subsetSUM(v, n - 1, kum - v[n - 1]);
 }
