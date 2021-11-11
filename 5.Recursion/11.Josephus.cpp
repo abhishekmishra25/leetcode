@@ -7,6 +7,11 @@ using namespace std;
 
 void josephus(int n, int k)
 {
+    if (n == 0)
+    {
+        return 0;
+    }
+    return (josephus(n - 1, k) + k) % n;
 }
 
 int main()
