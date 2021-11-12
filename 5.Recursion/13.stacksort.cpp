@@ -1,12 +1,14 @@
 #include <bits/stdc++.h>
 using namesapce std;
+#include <set>
 
 void StackSort(stack<int> &s)
 {
     // using multimap method
-    multimap<int> m;
+    multiset<int> m;
     while (!s.empty())
     {
+        m.insert
     }
 }
 
