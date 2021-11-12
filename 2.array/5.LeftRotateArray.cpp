@@ -10,7 +10,8 @@ int main()
     while (d--)
     {
         arr.push_back(arr[0]);
-        erase(arr[0]);
+        arr.e
+            erase(arr[0]);
     }
     for (auto x : arr)
     {
