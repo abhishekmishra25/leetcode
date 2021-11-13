@@ -3,6 +3,7 @@
 using namespace std;
 class soluction
 {
+public:
     int leftrotate(vector<int> arr)
     {
         int temp = arr[0];
