@@ -11,7 +11,7 @@ public:
             cout << arr[i] << " ";
         }
     }
-    leftrotate(int arr[], int n)
+    void leftrotate(int arr[], int n)
     {
         int temp = arr[0];
         for (int i = 1; i < n; i++)
@@ -51,6 +51,7 @@ int main()
     int d = 3;
     sol_Nive ob1;
     ob1.rotateARR(arr, d, 7);
+    cout << endl;
     for (int i = 0; i < 7; i++)
     {
         cout << arr[i] << " ";
