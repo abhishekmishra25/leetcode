@@ -33,6 +33,17 @@ public:
 
     // return arr;
 };
+class better
+{
+public:
+    void print(int arr[], int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+};
 int main()
 {
     // left rotate array by d
