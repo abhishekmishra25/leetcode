@@ -36,10 +36,17 @@ public:
 class better_extra_space
 {
 public:
+    void print(int arr[], int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            cout << arr[i] << " ";
+        }
+    }
     void rotateByD(int arr[], int n, int d)
     {
         int temp[d];
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < d; i++)
         {
             temp[i] = arr[i];
         }
@@ -47,10 +54,11 @@ public:
         {
             arr[i - d] = arr[i];
         }
-        for (int i = n - d; i < n; i++)
+        for (int i = 0; i < d; i++)
         {
-            arr[i] = temp[n - i];
+            arr[n - d + i] = temp[i];
         }
+        print(arr, n);
     }
 };
 int main()
@@ -61,10 +69,11 @@ int main()
     // soving using nive aproach
     /*
     sol_Nive ob1;
-    ob1.rotateARR(arr, d, 7);
-    cout << endl;*/
+    ob1.rotateARR(arr, d, 7);*/
+    cout << endl;
     better_extra_space ob2;
     ob2.rotateByD(arr, 7, d);
+    cout << endl;
     for (int i = 0; i < 7; i++)
     {
         cout << arr[i] << " ";
