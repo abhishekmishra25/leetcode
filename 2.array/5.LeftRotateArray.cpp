@@ -61,6 +61,26 @@ public:
         print(arr, n);
     }
 };
+class better_witout_extra_space
+{
+    void reverse(int arr[], int low, int high)
+    {
+        while (low < high)
+        {
+            swap(arr[low], arr[high]);
+            low++;
+            high--;
+        }
+    }
+
+public:
+    void reotate(int arr[], int n, int d)
+    {
+        reverse(arr, 0, d - 1);
+        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - 1);
+    }
+};
 int main()
 {
     // left rotate array by d
@@ -73,6 +93,9 @@ int main()
     cout << endl;
     better_extra_space ob2;
     ob2.rotateByD(arr, 7, d);
+    cout << endl;
+    better_witout_extra_space ob3;
+    ob3.reotate(arr, 7, d);
     cout << endl;
     for (int i = 0; i < 7; i++)
     {
