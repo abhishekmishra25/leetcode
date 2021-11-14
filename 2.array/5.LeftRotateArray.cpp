@@ -87,13 +87,19 @@ int main()
     int arr[] = {3, 4, 5, 6, 3, 1, 2};
     int d = 3;
     // soving using nive aproach
-    /*
+
     sol_Nive ob1;
-    ob1.rotateARR(arr, d, 7);*/
+    ob1.rotateARR(arr, d, 7);
     cout << endl;
+
+    // solving using extra space
+
     better_extra_space ob2;
     ob2.rotateByD(arr, 7, d);
     cout << endl;
+
+    // solving witout extra space
+
     better_witout_extra_space ob3;
     ob3.reotate(arr, 7, d);
     cout << endl;
