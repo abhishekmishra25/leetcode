@@ -29,12 +29,30 @@ public:
         return;
     }
 };
+class soluction_better
+{
+public:
+    void move_zero(int arr[], int n)
+    {
+        int count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] != 0)
+            {
+                swap(arr[i], arr[count]);
+                count++;
+            }
+        }
+    }
+};
 int main()
 {
     int arr[] = {1, 2, 0, 7, 0, 3, 6, 4, 0, 0, 0};
     int n = 11;
-    soluction_Nive ob1;
-    ob1.move_zero(arr, n);
+    // soluction_Nive ob1;
+    //  ob1.move_zero(arr, n);
+    soluction_better ob2;
+    ob2.move_zero(arr, n);
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
