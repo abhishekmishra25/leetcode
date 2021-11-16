@@ -1,6 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+class nive
+{
+public:
+    void leader(int arr[], int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            bool flag = false;
+            for (int j = i + 1; j < n; j++)
+            {
+                if (arr[i] < arr[j])
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == false)
+            {
+                cout << arr[i] << " ";
+            }
+        }
+    }
+};
+
 class soluction
 {
 public:
@@ -25,6 +49,9 @@ int main()
     int n = 7;
     soluction ob1;
     ob1.Leader(arr, n);
+    nive bo2;
+    cout << endl;
+    bo2.leader(arr, n);
 
     return 0;
 }
