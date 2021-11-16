@@ -2,6 +2,15 @@
 using namespace std;
 class soluction_Nive
 {
+    // void print(int arr[], int n)
+    // {
+    //     for (int i = 0; i < n; i++)
+    //     {
+    //         cout << arr[i] << " ";
+    //     }
+    //     return;
+    // }
+
 public:
     void move_zero(int arr[], int n)
     {
@@ -9,17 +18,18 @@ public:
         for (int i = 0; i < n; i++)
         {
             // int temp = arr[i];
-            for (int j = i + 1; j < n; j++)
+            if (arr[i] == 0)
             {
-                if (arr[i] == 0 and arr[j] != 0)
-                {
-                    swap(arr[i], arr[j]);
-                }
+                for (int j = i + 1; j < n; j++)
+                    if (arr[j] != 0)
+                        swap(arr[j], arr[i]);
             }
         }
+        // print(arr, n);
+        return;
     }
 };
-int mainn()
+int main()
 {
     int arr[] = {1, 2, 0, 7, 0, 3, 6, 4, 0, 0, 0};
     int n = 11;
@@ -29,4 +39,5 @@ int mainn()
     {
         cout << arr[i] << " ";
     }
+    return 0;
 }
