@@ -8,7 +8,7 @@ public:
     {
         int curr_max = arr[n - 1];
         cout << curr_max << " ";
-        for (int i = n - 1; i >= 0; i++)
+        for (int i = n - 1; i >= 0; i--)
         {
             if (arr[i] > curr_max)
             {
@@ -16,6 +16,7 @@ public:
                 curr_max = arr[i];
             }
         }
+        return;
     }
 };
 int main()
