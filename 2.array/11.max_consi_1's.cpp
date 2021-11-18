@@ -27,6 +27,6 @@ int main()
 {
     int arr[] = {0, 1, 1, 0, 1, 0, 1, 1, 1};
     int n = 9;
-    maxcon1(arr, n);
+    cout << maxcon1(arr, n);
     return 0;
 }
