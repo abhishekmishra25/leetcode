@@ -2,19 +2,20 @@
 
 using namespace std;
 
-void getsum(int arr[], int n)
+// NIVE soluction is fucking hatered
+int GetSUM(int arr[], int n)
 {
-    int res = arr[0];
+    int result = arr[0];
     for (int i = 0; i < n; i++)
     {
-        int curr = 0;
-        for (int j = i; i < n; j++)
+        int current = 0;
+        for (int j = i; j < n; j++)
         {
-            curr += arr[j];
-            res = max(res, curr);
+            current += arr[j];
+            result = max(result, current);
         }
     }
-    cout << res;
+    return result;
 }
 // applying kaddanes algorithm
 int maxSum(int arr[], int n)
@@ -40,7 +41,10 @@ int main()
 {
     int arr[] = {1, -2, 3, -1, 2};
     int n = 5;
+
+    cout << GetSUM(arr, n);
+    cout << endl;
     cout << maxSum(arr, n);
-    cout << getsum(arr, n);
+
     return 0;
 }
