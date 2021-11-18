@@ -21,25 +21,18 @@ int GetSUM(int arr[], int n)
 int maxSum(int arr[], int n)
 {
     int curr_sum = arr[0];
-    int max_sum = INT_MIN;
+    int max_sum = arr[0];
     for (int i = 1; i < n; i++)
     {
-        curr_sum += arr[i];
-        if (max_sum < curr_sum)
-        {
-            max_sum = curr_sum;
-        }
-        if (curr_sum <= 0)
-        {
-            curr_sum = 0;
-        }
+        max_sum = max(max_sum + arr[i], arr[i]);
+        curr_sum = max(curr_sum, max_sum);
     }
-    return max_sum;
+    return curr_sum;
 }
 
 int main()
 {
-    int arr[] = {-5, 1, -2, 3, -1, 2, -2};
+    int arr[] = {-5, -1, -2, -3, -1, -12, -2};
     int n = 7;
     // nive soluction
     cout << GetSUM(arr, n);
