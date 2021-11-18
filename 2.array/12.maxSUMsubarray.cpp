@@ -41,9 +41,10 @@ int main()
 {
     int arr[] = {1, -2, 3, -1, 2};
     int n = 5;
-
+    // nive soluction
     cout << GetSUM(arr, n);
     cout << endl;
+    // kadanes algorithm
     cout << maxSum(arr, n);
 
     return 0;
