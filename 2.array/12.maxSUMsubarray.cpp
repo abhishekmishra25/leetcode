@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// applyi8ng kaddanes algorithm
+// applying kaddanes algorithm
 
 int maxSum(int arr[], int n)
 {
