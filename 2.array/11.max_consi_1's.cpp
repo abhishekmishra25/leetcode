@@ -11,7 +11,7 @@ int maxcon1(int arr[], int n)
         {
             curr_count += 1;
         }
-        else
+        else if (arr[i] == 0)
         {
             curr_count = 0;
         }
