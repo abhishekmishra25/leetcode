@@ -8,7 +8,7 @@ void rainwater(int arr[], int n)
     for (int i = 1; i < n - 1; i++)
     {
         int lmax = arr[i];
-        for (int j = 0; i < i; j++)
+        for (int j = 0; j < i; j++)
         {
             lmax = max(lmax, arr[j]);
         }
