@@ -39,8 +39,8 @@ int maxSum(int arr[], int n)
 
 int main()
 {
-    int arr[] = {1, -2, 3, -1, 2};
-    int n = 5;
+    int arr[] = {-5, 1, -2, 3, -1, 2, -2};
+    int n = 7;
     // nive soluction
     cout << GetSUM(arr, n);
     cout << endl;
