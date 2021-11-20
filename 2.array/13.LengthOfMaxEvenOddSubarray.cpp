@@ -3,7 +3,7 @@ using namespace std;
 
 // create a function which tell max length of
 // even odd occurring subaaray
-
+// Nive soluction
 int MaxlenSubArray(int arr[], int n)
 {
     int rsult = 1;
@@ -20,6 +20,26 @@ int MaxlenSubArray(int arr[], int n)
         rsult = max(rsult, curr);
     }
     return rsult;
+}
+
+// this problem can also be solved by using
+// kadane Algorithm
+// this is a special 2 pointer approach
+
+int maxEvenOdd(int arr[], int n)
+{
+    int res = 1, curr = 1;
+    for (int i = 1; i < n; i++)
+    {
+        if ((arr[j] % 2 == 0 && arr[j - 1] % 2 != 0) || (arr[j] % 2 != 0 && arr[j - 1] % 2 == 0))
+            curr++;
+        else
+        {
+            res = max(curr, res);
+            curr = 1;
+        }
+    }
+    return res;
 }
 
 int main()
