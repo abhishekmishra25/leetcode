@@ -32,10 +32,13 @@ int maxEvenOdd(int arr[], int n)
     for (int i = 1; i < n; i++)
     {
         if ((arr[i] % 2 == 0 && arr[i - 1] % 2 != 0) || (arr[i] % 2 != 0 && arr[i - 1] % 2 == 0))
+        {
             curr++;
+            res = max(curr, res);
+        }
         else
         {
-            res = max(curr, res);
+
             curr = 1;
         }
     }
@@ -47,6 +50,7 @@ int main()
     int arr[] = {15, 10, 20, 6, 3, 8};
     int n = 6;
     cout << MaxlenSubArray(arr, n);
+    cout << endl;
     cout << maxEvenOdd(arr, n);
     return 0;
 }
