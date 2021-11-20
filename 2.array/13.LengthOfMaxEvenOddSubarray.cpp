@@ -31,7 +31,7 @@ int maxEvenOdd(int arr[], int n)
     int res = 1, curr = 1;
     for (int i = 1; i < n; i++)
     {
-        if ((arr[j] % 2 == 0 && arr[j - 1] % 2 != 0) || (arr[j] % 2 != 0 && arr[j - 1] % 2 == 0))
+        if ((arr[i] % 2 == 0 && arr[i - 1] % 2 != 0) || (arr[i] % 2 != 0 && arr[i - 1] % 2 == 0))
             curr++;
         else
         {
