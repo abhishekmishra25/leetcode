@@ -47,5 +47,6 @@ int main()
     int arr[] = {15, 10, 20, 6, 3, 8};
     int n = 6;
     cout << MaxlenSubArray(arr, n);
+    cout << maxEvenOdd(arr, n);
     return 0;
 }
