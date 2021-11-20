@@ -12,7 +12,7 @@ int MaxlenSubArray(int arr[], int n)
         int curr = 1;
         for (int j = i + 1; j < n; j++)
         {
-            if ((arr[i] % 2 == 0 and arr[i - 1] % 2 != 0) || (arr[i] % 2 != 0 and arr[i - 1] % 2 == 0))
+            if ((arr[j] % 2 == 0 && arr[j - 1] % 2 != 0) || (arr[j] % 2 != 0 && arr[j - 1] % 2 == 0))
                 curr++;
             else
                 break;
@@ -24,8 +24,8 @@ int MaxlenSubArray(int arr[], int n)
 
 int main()
 {
-    int arr[] = {10, 12, 13, 4, 9};
-    int n = 5;
+    int arr[] = {15, 10, 20, 6, 3, 8};
+    int n = 6;
     cout << MaxlenSubArray(arr, n);
     return 0;
 }
