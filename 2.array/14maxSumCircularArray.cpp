@@ -45,7 +45,7 @@ int revKadane(int arr[], int n)
 
 int main()
 {
-    int arr[] = {8, -4, 3, -5, 4};
+    int arr[] = {-4, 8, 3, -5, 4};
     int n = 5;
     cout << maxSum(arr, n);
     cout << endl;
