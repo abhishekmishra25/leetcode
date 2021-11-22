@@ -24,6 +24,6 @@ int main()
 {
     int arr[] = {5, -2, 3, 4};
     int n = 4;
-    maxSum(arr, n);
+    cout << maxSum(arr, n);
     return 0;
 }
