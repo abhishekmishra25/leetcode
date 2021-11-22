@@ -50,5 +50,11 @@ int main()
     cout << maxSum(arr, n);
     cout << endl;
     cout << revKadane(arr, n);
+    int arr2[] = {-4, -5};
+    int n2 = 2;
+    cout << endl;
+    cout << maxSum(arr2, n2);
+    cout << endl;
+    cout << revKadane(arr2, n2);
     return 0;
 }
