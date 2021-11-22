@@ -25,9 +25,17 @@ int findMajority(int arr[], int n)
 struct myCmp
 {
 public:
-    void good(map<int, int> p1, map<int, int> p2)
+    bool good(pair<int, int> p1, pair<int, int> p2)
     {
-        if (p1.se)
+        if (p1.second > p2.second)
+        {
+            return true;
+            ;
+        }
+        else
+        {
+            return false;
+        }
     }
 } int findMajority(int arr[], int n)
 {
