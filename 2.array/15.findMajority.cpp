@@ -14,7 +14,7 @@ int findMajority(int arr[], int n)
         }
         if (count > n / 2)
         {
-            return i;
+            return arr[i];
         }
     }
     return -1;
