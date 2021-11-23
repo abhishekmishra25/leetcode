@@ -60,7 +60,7 @@ int MooreBooting(int arr[], int n)
         if (count == 0)
         {
             res = i;
-            count = 0;
+            count = 1;
         }
     }
     count = 0;
