@@ -21,7 +21,7 @@ int findMajority(int arr[], int n)
 }
 
 // So, I want to solve this problem in O(N)
-//
+/*
 bool cmp(pair<int, int> &a, pair<int, int> &b)
 {
     return a.second < b.second;
@@ -43,7 +43,7 @@ int findMajority1(int arr[], int n)
     else
         return -1;
 }
-
+*/
 // So there is another method called More booting algorithm
 // this algorithm take O(1) space and
 // O(N) time
@@ -51,7 +51,7 @@ int findMajority1(int arr[], int n)
 int MooreBooting(int arr[], int n)
 {
     int res = 0, count = 1;
-    for (inti = 1; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         if (arr[res] == arr[i])
             count++;
@@ -63,20 +63,22 @@ int MooreBooting(int arr[], int n)
             count = 0;
         }
     }
-    int x = 0;
+    count = 0;
     for (int i = 0; i < n; i++)
     {
         if (arr[res] == arr[i])
-            x++;
-        if (x >= n / 2)
-            return res;
+            count++;
     }
-    return -1;
+    if (x >= n / 2)
+        return res;
+    else
+        return -1;
 }
 
 int main()
 {
     int arr[] = {8, 7, 6, 8, 6, 6, 6, 6, 6};
-    int n = 7;
-    cout << findMajority1(arr, n) << endl;
+    int n = 9;
+    // cout << findMajority1(arr, n) << endl;
+    cout << MooreBooting(arr, n) << endl;
 }
