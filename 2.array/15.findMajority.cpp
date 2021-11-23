@@ -43,6 +43,11 @@ int findMajority1(int arr[], int n)
     else
         return -1;
 }
+
+// So there is another method called More booting algorithm
+// this algorithm take O(1) space and
+// O(N) time
+
 int main()
 {
     int arr[] = {8, 7, 6, 8, 6, 6, 6, 6, 6};
