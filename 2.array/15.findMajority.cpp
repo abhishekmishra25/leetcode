@@ -22,33 +22,30 @@ int findMajority(int arr[], int n)
 
 // So, I want to solve this problem in O(N)
 //
-struct myCmp
+bool cmp(pair<int, int> &a, pair<int, int> &b)
 {
-public:
-    bool good(pair<int, int> p1, pair<int, int> p2)
-    {
-        if (p1.second > p2.second)
-        {
-            return true;
-            ;
-        }
-        else
-        {
-            return false;
-        }
-    }
-} int findMajority(int arr[], int n)
+    return a.second < b.second;
+}
+int findMajority1(int arr[], int n)
 {
-    mao<int, int> mp;
+    map<int, int> mp;
     for (int i = 0; i < n; i++)
     {
-        ma[arr[i]]++;
+        mp[arr[i]]++;
     }
-    sort(mp.begin(), mp.end(), myCmp);
+    sort(mp.begin(), mp.end(), cmp);
+    auto it = mp.begin();
+    int x = (*it).second;
+    if (x > n / 2)
+    {
+        return (*it).second;
+    }
+    else
+        return -1;
 }
 int main()
 {
     int arr[] = {8, 7, 6, 8, 6, 6, 6, 6, 6};
     int n = 7;
-    cout << findMajority(arr, n) << endl;
+    cout << findMajority1(arr, n) << endl;
 }
