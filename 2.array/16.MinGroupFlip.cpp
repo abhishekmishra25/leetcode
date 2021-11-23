@@ -2,14 +2,14 @@
 
 using namespace std;
 
-int count_group(int arr[], int n)
+int count_group(int arr[], int n, int a)
 {
     int count0 = 0, count1 = 0;
     for (int i = 1; i < n; i++)
     {
         if ((arr[i] == 1) and (arr[i - 1]) == 0)
             count1++;
-        }
+    }
     return count1;
 }
 
