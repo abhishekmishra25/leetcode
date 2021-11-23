@@ -48,6 +48,32 @@ int findMajority1(int arr[], int n)
 // this algorithm take O(1) space and
 // O(N) time
 
+int MooreBooting(int arr[], int n)
+{
+    int res = 0, count = 1;
+    for (inti = 1; i < n; i++)
+    {
+        if (arr[res] == arr[i])
+            count++;
+        else
+            count--;
+        if (count == 0)
+        {
+            res = i;
+            count = 0;
+        }
+    }
+    int x = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[res] == arr[i])
+            x++;
+        if (x >= n / 2)
+            return res;
+    }
+    return -1;
+}
+
 int main()
 {
     int arr[] = {8, 7, 6, 8, 6, 6, 6, 6, 6};
