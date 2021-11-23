@@ -69,10 +69,10 @@ int MooreBooting(int arr[], int n)
         if (arr[res] == arr[i])
             count++;
     }
-    if (count >= n / 2)
-        return res;
-    else
+    if (count <= n / 2)
         return -1;
+    else
+        return res;
 }
 
 int main()
