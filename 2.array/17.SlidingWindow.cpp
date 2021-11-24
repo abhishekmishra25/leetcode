@@ -18,7 +18,7 @@ void solve_sliding_window(int arr[], int n, int k)
     cout << sum;
     return;
 }
-using namespace std;
+// using namespace std;
 
 int main()
 {
