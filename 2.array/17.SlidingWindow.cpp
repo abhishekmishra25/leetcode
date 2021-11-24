@@ -6,8 +6,23 @@ using namespace std;
 // find  that a subarray exist with given sum
 // else return -1;
 
-void given_sum(int arr[], int n, int ksum)
+bool given_sum(int arr[], int n, int ksum)
 {
+    int curr_sum = arr[0], s = 0;
+    for (int e = 1; e < n; e++)
+    {
+        // clear the previous window
+        while (curr_sum > ksum and s < e - 1)
+        {
+            curr_sum -= arr[s];
+            s++;
+        }
+        if (curr_sum == ksum)
+            return true;
+        if (e < n)
+            curr_sum += arr[e];
+    }
+    return (curr_sum == ksum);
 }
 
 void solve_sliding_window(int arr[], int n, int k)
@@ -34,5 +49,7 @@ int main()
     int arr[] = {1, 8, 30, -5, 20, 7};
     int n = 6;
     solve_sliding_window(arr, n, 3);
+    cout << endl;
+    cout << given_sum(arr, n, 45);
     return 0;
 }
