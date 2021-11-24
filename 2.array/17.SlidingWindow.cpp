@@ -6,7 +6,7 @@ using namespace std;
 // find  that a subarray exist with given sum
 // else return -1;
 
-void given_sum(int arr[], int n)
+void given_sum(int arr[], int n, int ksum)
 {
 }
 
