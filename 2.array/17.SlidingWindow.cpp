@@ -2,6 +2,14 @@
 
 using namespace std;
 
+// Que 2: given an unsoted array you need to
+// find  that a subarray exist with given sum
+// else return -1;
+
+void given_sum(int arr[], int n)
+{
+}
+
 void solve_sliding_window(int arr[], int n, int k)
 {
     int sum = 0;
