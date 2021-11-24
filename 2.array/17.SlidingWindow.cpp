@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+using namespace std;
+
 void solve_sliding_window(int arr[], int n, int k)
 {
     int sum = 0;
