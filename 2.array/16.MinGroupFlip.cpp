@@ -21,7 +21,7 @@ void MinGroupFlip(int arr[], int n)
     int res = max(c0, c1);
     for (int i = 0; i < n; i++)
     {
-        }
+    }
 }
 
 int main()
