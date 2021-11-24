@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-void solve_sliding_window(int arr[] int n, int k)
+void solve_sliding_window(int arr[], int n, int k)
 {
     int sum = 0;
     for (int i = 0; i < k; i++)
