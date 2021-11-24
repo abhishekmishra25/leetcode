@@ -28,17 +28,12 @@ void MinGroupFlip(int arr[], int n)
 void solve(int arr[], int n)
 {
     int start = arr[0];
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        if (arr[i] != arr[i - 1])
-        {
-            if ((arr[i] != start))
-                cout << "From " << i << " to ";
-            else
-                cout << (i - 1) << endl;
-        }
-        // if ((arr[i + 1] == start) and (arr[i] != start))
-        //     cout << i << endl;
+        if ((arr[i] == start) and (arr[i + 1] != start))
+            cout << "From " << i + 1 << " to ";
+        if ((arr[i + 1] == start) and (arr[i] != start))
+            cout << i << endl;
     }
     if (arr[n - 1] != start)
     {
@@ -48,7 +43,7 @@ void solve(int arr[], int n)
 int main()
 {
     int arr[] = {1, 1, 0, 0, 1, 1, 0, 0, 1};
-    int n = 6;
+    int n = 9;
     solve(arr, n);
     return 0;
 }
