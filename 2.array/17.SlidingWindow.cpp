@@ -9,9 +9,10 @@ void solve_sliding_window(int arr[], int n, int k)
     {
         sum += arr[i];
     }
+    int curr = sum;
     for (int i = k; i < n; i++)
     {
-        int curr = sum + arr[i] - arr[i - k];
+        curr = curr + arr[i] - arr[i - k];
         sum = max(sum, curr);
     }
     cout << sum;
