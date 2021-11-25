@@ -2,6 +2,19 @@
 
 using namespace std;
 
+// solve n-bonacci number
+// wtf
+
+void n_bonacci(int n, int m)
+{
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = 0;
+    }
+    a[n - 1] = 1;
+}
+
 // Que 2: given an unsoted array you need to
 // find  that a subarray exist with given sum
 // else return -1;
