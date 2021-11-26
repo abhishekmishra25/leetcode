@@ -5,17 +5,24 @@ using namespace std;
 // solve n-bonacci number
 // wtf
 
-void n_bonacci(int n, int m)
+void bonacciseries(long n, int m)
 {
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
-        a[i] = 0;
-    }
+
+    // Assuming m > n.
+    int a[m] = {0};
     a[n - 1] = 1;
+    a[n] = 1;
+
+    // Uses sliding window
+    for (int i = n + 1; i < m; i++)
+        a[i] = 2 * a[i - 1] - a[i - n - 1];
+
+    // Printing result
+    for (int i = 0; i < m; i++)
+        cout << a[i] << " ";
 }
 
-// Que 2: given an unsoted array you need to
+// Que 2: given an unsoted +ive int array you need to
 // find  that a subarray exist with given sum
 // else return -1;
 
@@ -63,6 +70,7 @@ int main()
     int n = 6;
     solve_sliding_window(arr, n, 3);
     cout << endl;
-    cout << given_sum(arr, n, 45);
+    cout << given_sum(arr, n, 45) << endl;
+    bonacciseries(3, 8);
     return 0;
 }
