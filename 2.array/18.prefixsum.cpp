@@ -9,7 +9,7 @@ bool equilbrium(int arr[], int n)
     {
         sum += arr[i];
     }
-    lsum = 0;
+    int lsum = 0;
     for (int i = 0; i < n; i++)
     {
         if (lsum == sum - arr[i])
