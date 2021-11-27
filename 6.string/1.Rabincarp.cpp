@@ -3,7 +3,7 @@ using namespace std;
 
 #define mod 1e+9
 
-void RBsearch(String pat, string text, int m, int n)
+void RBsearch(string pat, string text, int m, int n)
 {
     int h = 1;
     for (int i = 0; i < n; i++)
@@ -30,5 +30,20 @@ void RBsearch(String pat, string text, int m, int n)
             if (flag == true)
                 cout << i << " ";
         }
+        if (i < n - m)
+        {
+            t = ((d * (t - text[i] * h) + text[i + m]) % mod);
+            if (t < 0)
+                t = t + mod;
+        }
     }
+    // if()
+}
+signed main()
+{
+    int n = 0, m = 0;
+    string text = "Apna Sapna Money monay";
+    string pat = "na";
+    RBsearch(pat, text, pat.length(), text.length());
+    return 0;
 }
