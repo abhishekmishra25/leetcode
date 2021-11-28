@@ -44,4 +44,6 @@ int main()
     int n;
     cin >> n;
     cout << fib(n) << endl;
+    cout << fib2(50) << endl;
+    cout << fibi(100) << endl;
 }
