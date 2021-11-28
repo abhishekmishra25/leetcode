@@ -44,6 +44,7 @@ signed main()
     int n = 0, m = 0;
     string text = "Apna Sapna Money monay";
     string pat = "na";
+    int *arr = new int[n + 1];
     RBsearch(pat, text, pat.length(), text.length());
     return 0;
 }
