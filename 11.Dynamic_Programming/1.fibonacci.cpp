@@ -43,7 +43,9 @@ int main()
 {
     int n;
     cin >> n;
+    int *arr = new int[n + 1];
     cout << fib(n) << endl;
-    cout << fib2(50) << endl;
+    cout << fib2(50, arr) << endl;
     cout << fibi(100) << endl;
+    cout << (80 % 10);
 }
