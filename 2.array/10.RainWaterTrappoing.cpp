@@ -45,8 +45,8 @@ void getwater(int arr[], int n)
 
 int main()
 {
-    int arr[] = {5, 0, 6, 2, 3};
-    int n = 5;
+    int arr[] = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+    int n = 12;
     rainwater(arr, n);
     getwater(arr, n);
     return 0;
