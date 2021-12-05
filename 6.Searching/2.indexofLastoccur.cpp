@@ -23,13 +23,14 @@ public:
                     low = mid + 1;
             }
         }
+        return -1;
     }
 };
 
 // main  function
 int main()
 {
-    vector<int> arr = {10, 10, 20, 20, 30, 40};
+    vector<int> arr = {10, 10, 20, 20, 30, 30, 40};
     int target = 30;
     soluction ob1;
     cout << ob1.Lastindex(arr, target) << endl;
