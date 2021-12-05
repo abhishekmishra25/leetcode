@@ -23,7 +23,7 @@ class better
 public:
     int sqroot(int x)
     {
-        int low = 1, high = x, ans = 0;
+        int low = 1, high = x, ans = -1;
         while (low <= high)
         {
             int mid = low + (high - low) / 2;
@@ -35,7 +35,7 @@ public:
             else
             {
                 low = mid + 1;
-                ans = 0;
+                ans = mid;
             }
         }
         return ans;
