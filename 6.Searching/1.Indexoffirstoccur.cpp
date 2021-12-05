@@ -31,4 +31,7 @@ int main()
 {
     vector<int> v = {10, 10, 20, 10, 20, 30};
     int n = 6;
+    soluction ob1;
+    cout << ob1.FirstOccur(v, n, 20) << endl;
+    return 0;
 }
