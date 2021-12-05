@@ -8,18 +8,18 @@ public:
     int sqroot(int x)
     {
         int i = 1;
-        for (; i * i < x; i++)
+        for (; i * i <= x; i++)
         {
             // hello world
         }
-        return i;
+        return i - 1;
     }
 };
 
 // man function
 int main()
 {
-    int x = 14;
+    int x = 25;
     soluction ob1;
     cout << ob1.sqroot(x) << endl;
     return 0;
