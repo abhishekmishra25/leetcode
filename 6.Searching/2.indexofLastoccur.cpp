@@ -31,4 +31,7 @@ int main()
 {
     vector<int> arr = {10, 10, 20, 20, 30, 40};
     int target = 30;
+    soluction ob1;
+    cout << ob1.Lastindex(arr, target) << endl;
+    return 0;
 }
