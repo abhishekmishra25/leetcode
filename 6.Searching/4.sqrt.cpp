@@ -44,7 +44,7 @@ public:
 // man function
 int main()
 {
-    int x = 25;
+    int x = 15;
     Nive ob1;
     cout << ob1.sqroot(x) << endl;
     better ob2;
