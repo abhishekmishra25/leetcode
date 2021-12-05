@@ -42,7 +42,9 @@ public:
 int main()
 {
     int x = 25;
-    soluction ob1;
+    Nive ob1;
     cout << ob1.sqroot(x) << endl;
+    better ob2;
+    cout << ob2.sqroot(x) << endl;
     return 0;
 }
