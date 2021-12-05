@@ -24,7 +24,7 @@ public:
     int sqroot(int x)
     {
         int low = 1, high = x;
-        whiel(low <= high)
+        while (low <= high)
         {
             int mid = low + (high - low) / 2;
             int msq = mid * mid;
