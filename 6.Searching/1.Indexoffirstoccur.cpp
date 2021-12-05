@@ -25,7 +25,9 @@ public:
         }
         return -1;
     }
-} int main()
+};
+// main function
+int main()
 {
     vector<int> v = {10, 10, 20, 10, 20, 30};
     int n = 6;
