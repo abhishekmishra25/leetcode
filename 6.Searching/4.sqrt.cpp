@@ -38,7 +38,7 @@ public:
                 ans = 0;
             }
         }
-        return -1;
+        return ans;
     }
 };
 // man function
