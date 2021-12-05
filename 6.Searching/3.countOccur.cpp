@@ -48,7 +48,7 @@ public:
     int CountOccr(vector<int> &arr, int target)
     {
         int low = FirstOccur(arr, arr.size(), target), high = Lastindex(arr, target);
-        return low - high;
+        return abs(low - high) + 1;
     }
 };
 
