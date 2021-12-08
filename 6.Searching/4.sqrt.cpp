@@ -51,3 +51,27 @@ int main()
     cout << ob2.sqroot(x) << endl;
     return 0;
 }
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool cmp(pair<T1, T2> &a, pair<T1, T2> &b)
+{
+    return a.second < b.second;
+}
+int main()
+{
+    string s = "nsdoivooirgoieq";
+    map<char, int> mp;
+    for (int i = 0; i < s.length(); i++)
+    {
+        mp[s[i]]++;
+    }
+    sort(mp.begin(), mp.end(), cmp);
+    for (auto x : mp)
+    {
+        cout << x.first << " ";
+    }
+    return 0;
+}
