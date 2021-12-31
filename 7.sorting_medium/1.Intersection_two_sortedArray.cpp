@@ -9,6 +9,12 @@ public:
         int i = 0, j = 0;
         while (i < n and j < m)
         {
+            if (i > 0 and arr[i - 1] == arr[i])
+            {
+                i++;
+                j++;
+                continue;
+            }
             if (ar1[i] == ar2[j])
             {
                 cout << ar1[i] << " ";
