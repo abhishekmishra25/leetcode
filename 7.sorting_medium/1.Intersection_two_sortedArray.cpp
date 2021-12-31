@@ -57,7 +57,6 @@ public:
             }
         }
     }
-    // fuck you
 };
 int main()
 {
