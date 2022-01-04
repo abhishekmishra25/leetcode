@@ -19,11 +19,26 @@ public:
             mp1[s[i]]++;
             mp2[s[i]]++;
         }
+        auto xt = mp2.begin();
+        for (auto it : mp1)
+        {
+            if (it.second == xt.second)
+            {
+                xt++;
+            }
+            else
+            {
+                cout << " error occured" << endl;
+                return;
+            }
+        }
     }
 };
 int main()
 {
     string s1 = "geeksforgeeks";
     string s2 = "skeegrofskeeg";
+    soluction ob1;
+    ob1.fuck_you(s1, s2);
     return 0;
 }
