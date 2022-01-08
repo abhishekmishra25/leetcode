@@ -19,20 +19,23 @@ public:
             mp1[s[i]]++;
             mp2[s[i]]++;
         }
-        map<char, int>::iterator xt = mp2.begin();
-        // auto xt = mp2.begin();
-        for (auto it : mp1)
+        auto it1 = mp1.begin();
+        auto it2 = mp2.begin();
+        while (it1.first == it2.first)
         {
-            if (it.second == xt.second)
+            if (it1.second == it2.second)
             {
-                xt++;
+                it1++;
+                it2++;
             }
             else
             {
-                cout << " error occured" << endl;
+                cout << " Not equal String ";
                 return;
             }
         }
+        cout << " Both string have same no of char" << endl;
+        return;
     }
 };
 int main()
