@@ -21,9 +21,9 @@ public:
         }
         map<char, int>::iterator it1 = mp1.begin();
         map<char, int>::iterator it2 = mp2.begin();
-        while (it1.first == it2.first)
+        while (it1->first == it2->first)
         {
-            if (it1.second == it2.second)
+            if (it1->second == it2->second)
             {
                 it1++;
                 it2++;
