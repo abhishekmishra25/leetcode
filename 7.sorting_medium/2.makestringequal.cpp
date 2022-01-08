@@ -19,7 +19,8 @@ public:
             mp1[s[i]]++;
             mp2[s[i]]++;
         }
-        auto xt = mp2.begin();
+        map<char, int>::iterator xt = mp2.begin();
+        // auto xt = mp2.begin();
         for (auto it : mp1)
         {
             if (it.second == xt.second)
