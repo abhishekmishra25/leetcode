@@ -16,11 +16,11 @@ public:
         }
         for (int i = 0; i < s1.length(); i++)
         {
-            mp1[s[i]]++;
-            mp2[s[i]]++;
+            mp1[s1[i]]++;
+            mp2[s2[i]]++;
         }
-        auto it1 = mp1.begin();
-        auto it2 = mp2.begin();
+        map<char, int>::iterator it1 = mp1.begin();
+        map<char, int>::iterator it2 = mp2.begin();
         while (it1.first == it2.first)
         {
             if (it1.second == it2.second)
