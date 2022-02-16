@@ -30,9 +30,10 @@ public:
 int main()
 {
     vector<int> nums;
-    int k;
-    while (stdin)
+    int k, i = 0;
+    while (i < 4)
     {
+        i++;
         int x;
         cin >> x;
         nums.push_back(x);
