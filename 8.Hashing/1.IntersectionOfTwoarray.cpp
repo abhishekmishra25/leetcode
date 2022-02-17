@@ -12,12 +12,12 @@ public:
 			mp1.insert(x);
 		for (auto x : num2)
 			mp2.insert(x);
-		auto it1 = mp1.begin();
-		auto it2 = mp2.begin();
-		while (it1 != mp1.end() || it2 != mp2.end())
+		for (auto x : mp1)
 		{
-			int
+			if (mp2.find(x) != mp2.end())
+				count++;
 		}
+		return count;
 	}
 };
 
