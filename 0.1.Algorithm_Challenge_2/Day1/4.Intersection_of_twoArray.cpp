@@ -19,13 +19,13 @@ public:
         }
         for (auto it1 : freq_1, it2 : freq_2; it1 != freq_1.end() and it2 != freq_2.end();)
         {
-            if (*it1.first == *it2.frist)
+            if (it1->first == it2->frist)
             {
                 count++;
                 it1++;
                 it2++;
             }
-            else if (*it1.first > *it2.first)
+            else if (->it1.first > it2->first)
                 it2++;
             else
                 it1++;
