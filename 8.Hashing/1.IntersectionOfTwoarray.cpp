@@ -6,7 +6,7 @@ class solution
 public:
 	int intersectionOfTwoarray(vector<int> &num1, vector<int> &num2)
 	{
-		set<int> mp1, mp2;
+		unordered_set<int> mp1, mp2;
 		int count;
 		for (auto x : num1)
 			mp1.insert(x);
