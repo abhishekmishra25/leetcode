@@ -47,13 +47,26 @@ public:
 
 int main()
 {
-    string s1 = "AXYZ", s2 = "BAZ";
+    string s1 = "aacakdbacaa", s2 = "aacabdkacaa";
     int m = s1.length(), n = s2.length();
     solution ob1;
-    cout << ob1.lcs(s1, s2, m, n);
-    cout << endl;
+    // cout << ob1.lcs(s1, s2, m, n);
+    // cout << endl;
     dyanmic ob2;
     cout << ob2.lcs(s1, s2, m, n);
 
     return 0;
 }
+
+// varitaion of lcs
+/*
+    1.Diff utility
+    In this programm we take lcs of two string, and find the difference b/w
+    these type of program are used in github to check what is differnce b/w previous
+    commited code and this code
+
+    2. Minimum insertion and deletion to convert s1 to s2
+    In this programm we find the LCS of strings (l) then
+    no of deletion to be make  = m-l
+    and no of addition to be make = n-1
+*/
