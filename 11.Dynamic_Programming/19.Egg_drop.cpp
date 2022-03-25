@@ -38,7 +38,15 @@ public:
         return mi + 1;
     }
 };
-
+class DpSolution
+{
+public:
+    int eggDrop(int floor, int egg)
+    {
+        int *arr = new int[floor + 1];
+        arr[0] = 0;
+    }
+};
 int main()
 {
     int floor, egg;
