@@ -7,9 +7,9 @@ for i in range(n):
         q[i][j-1]=1
        
 
-  a,b=map(int,input().split())
-    a-=1
- b-=1
+#   a,b=map(int,input().split())
+#     a-=1
+#  b-=1
 def qwe(nn,q3,cout):
     for i in range(n):
         if q[nn][i]==1:
