@@ -45,6 +45,7 @@ public:
     {
         int *arr = new int[floor + 1];
         arr[0] = 0;
+        return 0;
     }
 };
 int main()
